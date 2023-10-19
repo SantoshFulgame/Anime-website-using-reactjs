@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+body {
+  font-family: var(--font-roboto);
+  background-color: #212426;
+}
+.movie-card {
+    width: 240px;
+    height: 300px;
+    margin: 1.5rem;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  }
+  
+  .movie-card:hover img {
+    /* filter: blur(5px); */
+    opacity: 0.5;
+  }
+  .movie-card {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .movie-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-card .movie-info .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+
+  .movie-card .movie-info .play-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid white;
+
+  }
+
+  .movie-card .movie-info{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    padding: 22px;
+    flex-direction: column;
+    font-size: 14px;
+    align-items: left;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: 0.6s;
+    z-index: 1;
+       
+  }
+  .movie-card .movie-info:hover{
+    opacity: 0.8;
+  }
+  .movie-card .movie-info h4 {
+    font-family: var(--font-roboto);
+    margin-bottom: 2px 0px;
+  }
+  .movie-card .movie-info span{
+    font-size: 16px;
+    margin: 2px 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .movie-card .movie-info .color {
+    font-size: 15px;
+    color: #6cf702;
+  }
+   
+  
+/*   
+  .movie-card .movie-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background-color: #343739;
+    color: #f0f0f0;
+    transition: background-color 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    opacity: 1;
+  }
+  
+  .movie-card .movie-info h3 {
+    font-family: var(--font-roboto);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .movie-card .movie-info p {
+    margin: 4px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  
+  .movie-card:hover .movie-info p {
+
+    opacity: 1;
+  } */
+
+  
+  
